@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strona</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .button {
+            padding: 20px 40px;
+            font-size: 24px;
+            color: white;
+            background-color: #fffb00;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ff0000;
+        }
+    </style>
 </head>
 <body>
-   <h1>Hello</h1> <br> <a href="https://google.com">Google.com</a>
+   <h1>Hello!</h1>
+    <button class="button" onclick="window.location.href='https://www.google.com';">
+        Przejdź do Google
+    </button>
 </body>
 </html>
