@@ -8,6 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column; /* Umożliwia układ pionowy */
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -24,6 +25,7 @@
             border-radius: 10px;
             cursor: pointer;
             transition: background-color 0.3s;
+            margin: 10px 0; /* Dodaje odstęp między przyciskami */
         }
 
         .button:hover {
@@ -32,10 +34,10 @@
     </style>
 </head>
 <body>
-   <h1>Hello!</h1> <br>
+   <h1>Hello!</h1>
     <button class="button" onclick="window.location.href='https://www.google.com';">
         Przejdź do Google
-    </button> <br>
+    </button>
     <button class="button" onclick="window.location.href='https://downloadmoreram.com/';">
         Pobierz RAM
     </button>
