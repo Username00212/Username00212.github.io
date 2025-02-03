@@ -13,10 +13,23 @@
     button:hover {
       background-color: #6b5b5b; 
       color: white;
-    }</style>
+    }
+    .tresc {
+      transform: translateX(100%);
+      animation: slideIn 2s forwards;
+    }
+    @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
 </head>
 <body style="background-color: black;"> 
-  <div style="color: white; text-align: center;">  <h1 style="font-size: 100px;">Moje Portfolio</h1> <br>
+ <div class="tresc"> <div style="color: white; text-align: center;">  <h1 style="font-size: 100px;">Moje Portfolio</h1> <br>
     <button onclick="window.location.href='projekty.html';">Moje Projekty</button>&nbsp; &nbsp; <button onclick="window.location.href='kontakt.html';">Kontakt</button><br><br><br>
     <div style="float: right;"><img src="https://www.pngpacks.com/uploads/data/2065/IMG_AvWpVUZVB2my.png" height="500" width="300"></div><h2>Najpopularniejsze Projekty</h2> <br>
 <a href="https://google.com/"><img width="150" height="100" src="https://ocdn.eu/pulscms-transforms/1/CjAk9kpTURBXy85M2JiYzIyMzYzZGVlN2I1OTUzMWU1NDY5ZjBmMTZhNy5qcGeTlQPMjgHNAyPNAcSVAs0EsADDw5MJpjNjZTk3ZAbeAAGhMAE/tak-wyglada-nowe-logo-google.jpeg"></a>
@@ -46,7 +59,7 @@
 
 
 
-
+</div>
 </div>
 </body>
 </html>
