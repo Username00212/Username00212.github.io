@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <style>
-        /* Stylowanie ogólne */
         body {
             background-color: black;
             color: white;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateX(100%); }
+            100% { opacity: 1; transform: translateX(0); }
         }
 
         h1 {
@@ -19,7 +26,6 @@
         }
 
         .container {
-            text-align: center;
             padding: 20px;
         }
 
@@ -36,29 +42,30 @@
             color: white;
         }
 
-        .tresc {
-            transform: translateX(100%);
-            animation: slideIn 2s forwards;
-        }
-
-        @keyframes slideIn {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(0); }
-        }
-
-        /* Stylowanie obrazków */
         img {
             max-width: 100%;
             height: auto;
         }
 
-        /* Układ główny */
-        .content {
+        .janusz-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            text-align: center;
+            flex-wrap: wrap;
+            max-width: 90%;
+            margin: auto;
+        }
+
+        .janusz-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .janusz-img {
+            max-width: 300px;
+            height: auto;
         }
 
         .content img {
@@ -66,13 +73,6 @@
             max-width: 200px;
         }
 
-        .about {
-            max-width: 90%;
-            margin: auto;
-            text-align: center;
-        }
-
-        /* RESPONSYWNOŚĆ */
         @media (max-width: 1200px) {
             h1 {
                 font-size: 60px;
@@ -87,12 +87,12 @@
             h1 {
                 font-size: 45px;
             }
-            .content {
+            .janusz-container {
                 flex-direction: column;
                 text-align: center;
             }
-            .about {
-                font-size: 16px;
+            .janusz-text {
+                text-align: center;
             }
             button {
                 font-size: 20px;
@@ -113,30 +113,33 @@
 </head>
 <body>
 
-    <div class="container tresc">
+    <div class="container">
         <h1>Moje Portfolio</h1>
         <button onclick="window.location.href='projekty.html';">Moje Projekty</button>
         &nbsp; &nbsp;
         <button onclick="window.location.href='kontakt.html';">Kontakt</button>
     </div>
 
-    <div class="content">
+    <div class="janusz-container">
+        <div class="janusz-text">
+            <h2>O mnie</h2>
+            <p>
+                <b>Janusz Nowak – Programista Webowy z pasją do kodowania</b><br><br>
+                Cześć! Nazywam się Janusz Nowak i jestem programistą specjalizującym się w tworzeniu nowoczesnych, dynamicznych i responsywnych stron internetowych.
+                Tworzę aplikacje, które są zarówno estetyczne, jak i funkcjonalne.<br><br>
+                Jeśli szukasz programisty, który pomoże Ci zrealizować Twoje pomysły, zapraszam do kontaktu!
+            </p>
+        </div>
         <div>
-            <h2>Najpopularniejsze Projekty</h2>
-            <a href="https://google.com/"><img src="https://ocdn.eu/pulscms-transforms/1/CjAk9kpTURBXy85M2JiYzIyMzYzZGVlN2I1OTUzMWU1NDY5ZjBmMTZhNy5qcGeTlQPMjgHNAyPNAcSVAs0EsADDw5MJpjNjZTk3ZAbeAAGhMAE/tak-wyglada-nowe-logo-google.jpeg"></a>
-            <a href="https://facebook.com/"><img src="https://bitdefender.pl/wp-content/uploads/2024/05/facebook.jpg"></a>
-            <a href="https://amazon.com/"><img src="https://m.media-amazon.com/images/G/48/gc/designs/livepreview/amazon_blue_noto_email_v2016_pl-main._CB410899028_.jpg"></a>
+            <img class="janusz-img" src="https://www.pngpacks.com/uploads/data/2065/IMG_AvWpVUZVB2my.png" alt="Janusz Nowak">
         </div>
     </div>
 
-    <div class="about">
-        <h2>O mnie</h2>
-        <p>
-            <b>Janusz Nowak – Programista Webowy z pasją do kodowania</b><br><br>
-            Cześć! Nazywam się Janusz Nowak i jestem programistą specjalizującym się w tworzeniu nowoczesnych, dynamicznych i responsywnych stron internetowych. 
-            Tworzę aplikacje, które są zarówno estetyczne, jak i funkcjonalne.<br><br>
-            Jeśli szukasz programisty, który pomoże Ci zrealizować Twoje pomysły, zapraszam do kontaktu!
-        </p>
+    <div class="container">
+        <h2>Najpopularniejsze Projekty</h2>
+        <a href="https://google.com/"><img src="https://ocdn.eu/pulscms-transforms/1/CjAk9kpTURBXy85M2JiYzIyMzYzZGVlN2I1OTUzMWU1NDY5ZjBmMTZhNy5qcGeTlQPMjgHNAyPNAcSVAs0EsADDw5MJpjNjZTk3ZAbeAAGhMAE/tak-wyglada-nowe-logo-google.jpeg"></a>
+        <a href="https://facebook.com/"><img src="https://bitdefender.pl/wp-content/uploads/2024/05/facebook.jpg"></a>
+        <a href="https://amazon.com/"><img src="https://m.media-amazon.com/images/G/48/gc/designs/livepreview/amazon_blue_noto_email_v2016_pl-main._CB410899028_.jpg"></a>
     </div>
 
     <div class="container">
